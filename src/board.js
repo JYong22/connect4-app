@@ -21,8 +21,8 @@ class Board extends React.Component{
         return(
             <BoardSlot className = {boardSlot} caption= {num} onClick = {()=>{   
                                                         
-                                                        const winningCombo = game.findWin();
-                                                        const inProg = game.inProgress();
+                                                        let winningCombo = game.findWin();
+                                                        let inProg = game.inProgress();
 
                                                         if (inProg){ //if game is inprogress then if selected game slot is empty
                                                                      // then run the game.move method. Slot is now either yellow or red
@@ -33,11 +33,13 @@ class Board extends React.Component{
                                                                 document.getElementById("header_Turn").textContent = game.turn +"'s turn";
                                                                 document.getElementById("header_Turn").style.color = game.turn;
                                                                 document.getElementsByClassName("board_Slot")[num].style.background = game.board[num];
+                                                                winningCombo = game.findWin();
+                                                                inProg = game.inProgress();
                                                             }
                                                         }
                                                         //if not in progress, find winning combo throughout the board
                                                         //if winningcombination is found then the player that won is displayed on the header
-                                                        else if (!inProg){
+                                                        if (!inProg){
                                                             if(winningCombo){
                                                                     for (let i = 0; i<game.board.length; i++){
                                                                     

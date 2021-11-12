@@ -18,11 +18,40 @@ code {
 
 #page{
 
-  width: 50%;
-  height: 50%;
+  min-width: 50%;
+  min-height: 50%;
+
+  width: 600px;
+  height: 600px;
   background: rgb(205, 245, 255);
   padding: 20px;
   text-align: center;
+
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+#homeText{
+  color: red;
+  font-size: 100px;
+  font-family: "Brush Script MT", cursive;
+  animation-name: colorchange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes colorchange {
+  0%   {color: red;}
+  25%  {color: rgb(255, 153, 0);}
+  50%  {color: yellow;}
+  75%  {color: rgb(255, 153, 0);}
+  100% {color: red;}
+
+}
+#playButton{
+
 }
 
 
@@ -89,3 +118,4 @@ code {
   text-align: center;
   color: rgb(255, 255, 255);
 }
+

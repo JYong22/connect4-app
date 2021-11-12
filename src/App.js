@@ -9,10 +9,13 @@ function App() {
   //Home page with a button to enter the game
   return ( 
     <div id = "page">
-      <Home/>
-      <button id = "playButton" onClick = {()=> {ReactDOM.render(<GamePage/>, document.getElementById('root'))}} > 
+      <div>
+        <Home/>
+      
+        <button id = "playButton" onClick = {()=> {ReactDOM.render(<GamePage/>, document.getElementById('root'))}} > 
               Play
-      </button>
+        </button>
+      </div>
     </div>
     
     

@@ -4,7 +4,7 @@ import Board from "./board";
 //home page
 function Home(props){
     return(
-        <h1>
+        <h1 id = "homeText">
             Connect Four
         </h1>
     );
